@@ -4,29 +4,24 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'API Bancaire Professionnelle',
-      version: '2.0.0',
-      description: `API de gestion bancaire avec architecture MVC
+      title: 'API Bancaire - Devoir 304',
+      version: '1.0.0',
+      description: `API de gestion bancaire
 
 **Étudiant :** MANOH SONKOUE Brinda
 **Matricule :** 23V2302
 
-## Architecture
-- Modèles (Models)
-- Contrôleurs (Controllers)
-- Services (Services)
-- Routes (Routes)
-- Middlewares
-- Validateurs
-
 ## Fonctionnalités
-- Création de compte
-- Dépôt et retrait
-- Consultation solde
-- Historique
-- Fermeture de compte`
+- POST /api/accounts - Créer un compte
+- GET /api/accounts - Lister les comptes
+- GET /api/accounts/{id} - Consulter un compte
+- POST /api/accounts/{id}/deposit - Faire un dépôt
+- POST /api/accounts/{id}/withdraw - Faire un retrait
+- GET /api/accounts/{id}/transactions - Voir historique
+- DELETE /api/accounts/{id} - Fermer un compte`
     },
     servers: [
+      { url: 'https://api-bancaire-8l05.onrender.com', description: 'Serveur Render' },
       { url: 'http://localhost:3000', description: 'Serveur local' }
     ]
   },
